@@ -1,0 +1,41 @@
+﻿@using CRUD_MVC.Models
+@{
+    ViewBag.Title = "EmpOperations";
+    EmployeeModel E = new EmployeeModel();
+}
+
+<h2>EmpOperations</h2>
+<p>@ViewBag.Message</p>
+<div>
+    @using (@Html.BeginForm())
+            {
+    <table align="center" border="1">
+        <tr>
+            <th>Enter Employee ID</th>
+            <td>@Html.TextBoxFor(Model => E.Empid)</td>
+        </tr>
+        <tr>
+            <th>Enter Ename</th>
+            <td>@Html.TextBoxFor(Model => E.Ename)</td>
+        </tr>
+        <tr>
+            <th>Enter Designation</th>
+            <td>@Html.TextBoxFor(Model => E.Designation)</td>
+        </tr>
+        <tr>
+            <th>Enter Salary</th>
+            <td>@Html.TextBoxFor(Model => E.Salary)</td>
+        </tr>
+        <tr>
+            <td> <input type="submit" value="INSERT" name="B1" /> </td>
+            <td><input type="submit" value="UPDATE" name="B1" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit"  value="Delete" name="B1" /></td>
+        </tr>
+    </table>
+          }
+</div>
+
+
+
